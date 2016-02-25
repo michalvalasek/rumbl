@@ -56,7 +56,7 @@ defmodule Rumbl.VideoController do
     render(conn, "edit.html", video: video, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "video" => video_params}) do
+  def update(conn, %{"id" => id, "video" => video_params}, user) do
     video = Repo.get!(user_videos(user), id)
     changeset = Video.changeset(video, video_params)
 
