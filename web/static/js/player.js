@@ -17,7 +17,7 @@ let Player = {
       videoId: playerId,
       events: {
         "onReady": (event => onReady(event)),
-        "onStateChane": (event => this.onPlayerStateChange(event))
+        "onStateChange": (event => this.onPlayerStateChange(event))
       }
     })
   },
